@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="CSS/style.css" />
+		<script src="JavaScript/VertAnimations.js" > </script>
+		<script src="JavaScript/HoriAnimations.js" > </script>
+		<script src="JavaScript/Animations.js" > </script>
+		<script src="JavaScript/ObliAnimations.js" > </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async > </script>
+		<title> Pole grawitacyjne </title>
+	</head>
+
+	<body>
+		<header>
+			Ruch obiektów nad powierzchnią ziemi w polu grawitacyjnym.
+		</header>
+
+		<ul>
+			<li class="main_points" > <h1> Wstęp </h1>
+				<div class="main_para" >
+					<br/> Pole grawitacyjne powoduje ruch obiektów posiadających masę. Siła jego oddziaływania jest zapisana poniższym wzorem. <br/>
+
+					<p> <span class="wzor" > \( F_g = G {m M \over r^2} \) </span> </p>
+
+					Zmienna r jest odległościa pomiędzy oddziaływującymi na siebie ciałami. Widać więc, że dla planet minimalna wielkość zmiennej r to promień planety. Dla ziemi jest to około 6 378 km. Używając drugiego prawa Newtona można wyznaczyć przyśpieszenie grawitacyjne. <br/>
+
+					<p> 
+					<span class="wzor" >
+						\( F_{g} = gm = G {mM \over r^2} \) <br/>
+						\( g = G {M \over r^2} \)
+					</span>
+					 </p>
+
+					Oznacza to że nawet dla wysokości 1km nad powierzchnią ziemi przyśpieszenie zmienia się o zaledwie 0.03% względem tego na powierzchni.  
+					Dla małych różnic wysokości można więc założyć, że przyśpieszenie grawiacyjne jest stałe. Ze wzoru wynika również, że na masa spadającego obiektu nie ma wpływu na przyśpieszenie tym samym na ruch. <br/>
+
+					Aby otrzymać wzory opisujące ruch obiektu w polu grawitacyjnym możemy posłużyć się definicjami na prędkość i przyśpieszenie. <br/>
+
+					<p> 
+					<span class="wzor" >
+						\( v(t) = \frac{\mathrm{d} x(t)}{\mathrm{d} t} \) <br/>
+						\( a(t) = \frac{\mathrm{d} v(t)}{\mathrm{d} t} \)
+					</span>
+					</p>
+
+					Wiedząc, że przyśpiesznie jest w naszym przypadku stałe pozwala nam to obliczyć wzór na prędkość. <br/>
+
+					<p>
+					<span class="wzor" > 
+						\( a(t) = \frac{\mathrm{d} v(t)}{\mathrm{d} t} \Rightarrow v(t) = \int a \mathrm{d}t \) <br/>
+						\( v(t) = at + v_0 \)
+					</span>
+					</p>
+					Otrzymany wyraz wolny v<sub>0</sub> to prędkość początkowa jaką miał obiekt. <br/>
+
+					Tym samym mając już zależność prędkości od czasu możemy znaleźć wzór na położenie w zależności od czasu. <br/>
+					<p>
+					<span class="wzor" >
+						\( v(t) = \frac{\mathrm{dx(t)} }{\mathrm{d} t} \Rightarrow x(t) = \int v(t) \mathrm{d} t \) <br/>
+						\( x(t) = \frac{1}{2} a t^2 + v_0t + x_0 \)
+					</span>
+					</p>
+
+					Dzięki tym przekształceniom otrzymaliśmy wzór pozwalający badać przebytą drogę w zależnosci od czasu dla różnych warunków początkowych: x<sub>0</sub>, v<sub>0</sub>. Dla obiektów poruszających się w polu grawitacyjnym możemy analizować ruch rozkładając go na dwa wektory. Wektor zgodny z kierunkiem działania siły grawitacyjnej i prostopadły do niego. Jest to możliwe ponieważ siła nie może wywoływać zmiany prędkości w kierunku prostopadłym do swojego działania. <br/> <br/>
+
+					Pozawala to rozłożyć prędkość w sposób przedstawiony na rysunku. <br/>
+					<svg width="400" height="200" > 
+						<circle cx="200" cy="70" r="50" stroke="black" stroke-width="3" fill="#700000" />
+
+						<line class="additional_svg_lines" x1="330" y1="150" x2="330" y2="70" />
+						<line class="additional_svg_lines" x1="330" y1="150" x2="200" y2="150" />
+
+
+						<line class="v_arrow" x1="200" y1="70" x2="330" y2="150"  />
+						<line class="v_arrow" x1="330" y1="150" x2="330" y2="145" />
+						<line class="v_arrow" x1="330" y1="150" x2="325" y2="150" />
+						
+						<line class="x_arrow" x1="200" y1="70" x2="330" y2="70" />
+						<line class="x_arrow" x1="330" y1="70" x2="327" y2="74" />
+						<line class="x_arrow" x1="330" y1="70" x2="327" y2="66" />
+
+						<line class="y_arrow" x1="200" y1="70" x2="200" y2="150" />
+						<line class="y_arrow" x1="200" y1="150" x2="204" y2="147" />
+						<line class="y_arrow" x1="200" y1="150" x2="196" y2="147" />
+
+						<line class="g_arrow" x1="50" y1="20" x2="50" y2="100" />
+						<line class="g_arrow" x1="50" y1="100" x2="53" y2="96" />
+						<line class="g_arrow" x1="50" y1="100" x2="47" y2="96" />
+
+						<circle cx="200" cy="70" r="5" fill="yellow" />
+
+						<text x="10" y="125" fill="#22e600"> 
+							g - Przyśpieszenie
+							<tspan x="10" y="140" >grawitacyjne.</tspan>
+						</text>
+						<text x="120" y="150" fill="#ff3636">
+							Vy - Pionowy
+							<tspan x="120" y="165"> wektor składowy </tspan>
+							<tspan x="120" y="180"> prędkości. </tspan>
+						</text>
+						<text x="300" y="30" fill="#216bff">
+							Vx - Poziomy
+							<tspan x="300" y="45" > wektor składowy </tspan>
+							<tspan x="300" y="60" > prędkości. </tspan>
+						</text>
+						<text x="270" y="170" fill="black">
+							V - Wektor 
+							<tspan x="270" y="185" > prędkości wypadkowej. </tspan>
+						</text>
+
+					</svg>
+
+
+					 <br/> <br/>
+
+				</div>
+			</li>
+
+			<li class="main_points" > <h1> Rzut pionowy </h1>
+				<div class="main_para" >
+					<br/> Dla rzutu pionowego ruch obiektu jest ruchem jednostajnie przyśpieszonym prostoliniwym.
+					Obiekt w naszym przypadku kulka o masie m zaczyna swój ruch mając pewną wysokość h<sub>0</sub> i prędkość początkową v<sub>0</sub> o kierunku pionowym. Ruch odbywa się przy wpływie przyśpieszenia grawitacyjnego g, które dla małych różnic wysokości można uznać za stałe. Jako że prędkość pozioma jest zerowa obiekt porusza sie zgodnie z kierunkiem działania siły grawitacji.<br/> <br/>
+
+					Sczególnym przypadkiem rzutu pionowego jest spadek swobodny gdy prędkość początkowa jest równa 0. <br/> <br/>
+
+					Mamy więc: <br/>
+					<p>	
+						g - przyśpieszenie grawitacyjne <br/>
+						y<sub>0</sub> - wysokość na której znajduje się kulka. <br/>
+						v<sub>0</sub> - prędkość początkowa kulki. <br/>
+					</p>
+					<p>
+						Zapisując to przy pomocy równań mamy: <br/>
+						<span class="wzor" >
+							\( v_{0y} = v_0 \cdot sin(90^{\circ}) = v_0 \) <br/>
+							\( v_{0x} = v_0 \cdot cos(90^{\circ}) = 0 \) <br/> <br/>
+						</span>
+
+						Droga pionowo: <br/>
+						<span class="wzor" >
+							\( y = y_0 + v_0t - \frac{1}{2} gt^2 \) <br/> <br/>
+						</span>
+						Jako że w końcu obiekt uderzy w ziemie to wzór ten dla y = 0 określa nam czas trwania ruchu. <br/>
+						Wiedząc że czas nie może być ujemny po przekształceniu wzoru otrzymujemy:<br/> <br/>
+						<span class="wzor" >
+							\( t_{max} = 2\frac {v_0 + \sqrt{v_0^2 + 2gy_0} } {g}  \) <br/> <br/>
+						</span>
+						Ruch w poziomie nie występuje więc \( x(t) = x_0 \) <br/> <br/>
+
+						Animacja tego ruchu jest zamieszczona poniżej.
+
+					</p>
+					<br/>
+						Animacja pokazuje trajektorie lotu obiektu o zadanych warunkach początkowych. Dodatkowo są narysowane na określonych etapach składowe wektora prędkości. <br/> <br/>
+				</div>
+				<div id="vertical_div" > 
+					<button onclick="VertFormClick()"> Przeprowadź animacje ruchu </button> <br/> <br/>
+				</div> <br/> <br/>
+			</li>
+
+			<li class="main_points" > <h1> Rzut poziomy  </h1> 
+				<div class="main_para" >
+					<br/> Dla rzutu poziomego ruch obiektu można rozłożyć na dwa osobne prostopadłe do siebie ruchy. Jeden to ruch w poziomie gdzie na ten ruch nie wpływa siła grawitacji. Kolejnym ruchem jest ruch w pionie, który jest identyczny do spadku swobodnego.
+					Kula o masie m zaczyna swój ruch mając pewną wysokość h<sub>0</sub>, położenie x<sub>0</sub> i prędkość początkową v<sub>0</sub>. Ruch odbywa się przy wpływie przyśpieszenia grawitacyjnego g, które tak jak poprzednio uznajemy za stałe. <br/> <br/>
+
+					Mamy więc:
+					<p class='' >
+						g - przyśpieszenie grawitacyjne <br/>
+						y<sub>0</sub> - wysokość na której znajduje się kulka. <br/>
+						x<sub>0</sub> - położenie początkowe w osi poziomej. <br/>
+						v<sub>0</sub> - prędkość początkowa kulki. <br/>
+					</p>
+					<p>
+						Zapisując to przy pomocy równań mamy: <br/>
+						<span class="wzor" >
+							\( v_{0y} = v_0 \cdot sin(0^{\circ}) = 0 \) <br/>
+							\( v_{0x} = v_0 \cdot cos(0^{\circ}) = v_0 \) <br/> <br/>
+						</span>
+						Droga pionowo: <br/>
+						<span class="wzor" >
+							\( y = y_0 + 0t - \frac{1}{2} gt^2 = y_0 - \frac{1}{2} gt^2 \) <br/> <br/>
+						</span>
+						Jako że w końcu obiekt uderzy w ziemie to wzór ten dla y = 0 określa nam czas trwania ruchu. <br/>
+						Po przekształceniu wzoru otrzymujemy:<br/> <br/>
+						<span class="wzor" >
+							\( t_{max} = \sqrt{ \frac{2y_0} {g} } \) <br/> <br/>
+						</span>
+
+						Droga poziomo: <br/>
+						Prędkość pozioma się nie zmienia ponieważ przyśpieszenie jest do niej prostopadłe. Mamy więc ruch jednostajny. <br/>
+						<span class="wzor" >
+							\( x = x_0 + v_0 t\) <br/> <br/>
+						</span>
+
+						Pozwala to uzyskać zależność \( y(x) \). Naszym ograniczeniem na x jest \( t \leq t_{max}\).
+						Tym samym w zależności od kierunku v<sub>0</sub> mamy \( x \epsilon (x_0, x_0 + v_0 t_{max}) \) lub przedział odwrotny. Wyliczając \(t\) z zależności \(x(t)\) wstawiamy go do zależności \(y(t)\) <br/> <br/>
+
+						<span class="wzor" >
+							\( y = y_0 - \frac{g (x - x_0)^2 }{2 v_0^2} \) <br/> <br/>
+						</span>
+
+						Pozwala nam to narysować zależność wysokości od przebytej drogi. Animacja takiego ruchu znajduje sie poniżej.
+
+					</p>
+					<br/>
+						Animacja pokazuje trajektorie lotu obiektu o zadanych warunkach początkowych. Dodatkowo są narysowane na określonych etapach składowe wektora prędkości. <br/> <br/>
+
+				</div>
+				<div id="horizontal_div" > 
+					<button onclick="HoriFormClick()"> Przeprowadź animacje ruchu </button> <br/> <br/>
+				</div> <br/> <br/>
+			</li>
+
+			<li class="main_points" > <h1> Rzut ukośny </h1> 
+				<div class="main_para" >
+					<br/> Dla rzutu ukośnego mamy doczynienia z połączeniem obu wcześniej opisanych ruchów. Rozkładając ruch na dwa osobne uzyskujemy ruch w poziomie ruch jednostajny. Natomiast w pionie jest to rzut pionowy z niezerową prędkością początkową. Kulka znajduje się z początku na pewnej wysokości h<sub>0</sub> i w pewnej odległości x<sub>0</sub>. Jej predkość początkowa v<sub>0</sub> może mieć obie współżędne niezerowe co onzacza wektor prędkości pod jakimś kątem od poziomu. <br/> <br/>
+
+					Mamy więc:
+					<p>
+						g - przyśpieszenie grawitacyjne <br/>
+						y<sub>0</sub> - wysokość na której znajduje się kulka. <br/>
+						x<sub>0</sub> - odległość na której znajduje się kulka. <br/>
+						v<sub>0</sub> - prędkość początkowa kulki. <br/>
+						&alpha; - kąt nachylenia prędkości początkowej do poziomu <br/>
+					</p>
+					<p>
+						Zapisując to przy pomocy równań mamy: <br/>
+						<span class="wzor" >
+							\( v_{0y} = v_0 \cdot sin(\alpha) \) <br/>
+							\( v_{0x} = v_0 \cdot cos(\alpha) \) <br/> <br/>
+						</span>
+
+						Droga pionowo: <br/>
+						<span class="wzor" >
+							\( y = y_0 + v_{0x}t - \frac{1}{2} gt^2 \) <br/>
+						</span>
+						Jako że w końcu obiekt uderzy w ziemie to wzór ten dla y = 0 określa nam czas trwania ruchu. <br/>
+						Wiedząc że czas nie może być ujemny po przekształceniu wzoru otrzymujemy:<br/> <br/>
+						<span class="wzor" >
+							\( t_{max} = 2\frac {v_{0y} + \sqrt{ {v_{0y}}^2 + 2gy_0} } {g}  \) <br/> <br/>
+						</span>
+
+						Droga poziomo: <br/>
+						Prędkość pozioma sie nie zmienia ponieważ przyśpieszenie jest do niej prostopadłe. Mamy więc ruch jednostajny. <br/>
+						<span class="wzor" >
+							\( x = x_{0x} + v_{0x} t\) <br/> <br/>
+						</span>
+
+						Pozwala to uzyskać zależność \( y(x) \). Naszym ograniczeniem na x jest \( t \leq t_{max}\).
+						Tym samym w zależności od kierunku v<sub>0</sub> mamy \( x \epsilon (x_0, x_0 + v_{0x} t_{max}) \) lub przedział odwrotny. Wyliczając \(t\) z zależności \(x(t)\) wstawiamy go do zależności \(y(t)\) <br/> <br/>
+
+						<span class="wzor" >
+							\( y = y_0 + (x - x_0) \frac {v_{0y}} {v_{0x}} - \frac{g (x - x_{0x})^2 }{2 {v_{0x}}^2} \) <br/> <br/>
+						</span>
+
+						Bardziej upraszczając mamy: <br/><br/>
+						
+						<span class="wzor" >
+							\( y = y_0 + (x - x_0) \cdot tg(\alpha) - \frac{g (x - x_{0x})^2 }{2 {v_0^2 \cdot cos^2(\alpha)}}  \) <br/> <br/>
+						</span>
+						Pozwala nam to narysować zależność wysokości od przebytej drogi. Animacja takiego ruchu znajduje sie poniżej.
+					</p>
+					<br/>
+						Animacja pokazuje trajektorie lotu obiektu o zadanych warunkach początkowych. Dodatkowo są narysowane na określonych etapach składowe wektora prędkości. <br/> <br/>	
+
+				</div>
+				<div id="oblique_div" >
+					<button onclick="ObliqFormClick()"> Przeprowadź animacje ruchu </button> <br/> <br/>
+				</div>
+			</li>
+		</ul>
+
+		<footer>
+			<div id="footer_div" > &copy; TI projekt - Maciej Walczak 2021 </div>
+		</footer>
+	</body>
+
+</html>

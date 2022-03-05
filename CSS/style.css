@@ -1,0 +1,161 @@
+body {
+	background: #343354;
+	color: white;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+button {
+	height: 30px;
+	margin-left: 30px;
+	border: none;
+	border-radius: 12px;
+}
+
+button:hover {
+	background: #adadad;
+}
+
+header {
+	height: 80px;
+	text-align: center;
+	padding-top: 20px;
+	margin: auto;
+	background: #626585;
+	font-size: 50px;
+}
+
+p {
+	font-size: 20px;
+	margin-left: 50px;
+}
+
+input {
+	width: 30px;
+}
+
+label {
+	padding-left: 10px;
+	font-size: 15px;
+}
+
+canvas {
+	background: #3d3d3d;
+}
+
+footer {
+	height: 40px;
+	width: auto;
+	text-align: center;
+	background: #626585;
+	font-size: 20px;
+}
+
+#footer_div {
+	position: relative;
+	top: 10px;
+}
+
+.znacznik_div{
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	width: auto;
+}
+
+.znacznik {
+	width: auto;
+	text-align: center;
+}
+
+.main_para {
+	font-size: 20px;
+	margin-left: 30px;
+}
+
+.main_points {
+	font-size: 30px;
+	margin-left: 20px;
+}
+
+.form_div {
+	margin-left: 30px;
+	background: #324354;
+	font-size: 15px;
+	height: 500px;
+	width: 17%;
+	float: left;
+}
+
+.form_div > button {
+	height: 40px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 12px;
+	color: white;
+	background:  #3d3d3d;
+}
+
+.form_div > button:hover {
+	background: #1d1d1d;
+}
+
+
+.canv_div {
+	height: 500px;
+	width: 80%;
+	float: left;
+}
+
+.clear_div {
+	clear: both;
+}
+
+.wzor {
+	color: #fcba03;
+}
+
+#vert_canv_div_id {
+	height: 500px;
+	width: 40%;
+	float: left;
+}
+
+/************CSS to SVG**************/
+text {
+	width: 100px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+
+.x_arrow {
+	stroke: #216bff;
+	stroke-width: 2px;
+}
+
+
+.y_arrow {
+	stroke: red;
+	stroke-width: 2px;
+}
+
+
+.v_arrow {
+	stroke: black;
+	stroke-width: 2px;
+}
+
+.g_arrow {
+	stroke: #22e600;
+	stroke-width: 2px;
+}
+
+.additional_svg_lines {
+	stroke: black;
+	stroke-dasharray: 2px;
+	stroke-width: 1px;
+}
